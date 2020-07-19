@@ -1,0 +1,29 @@
+.root {
+  flex-grow: 1;
+}
+
+.menuButton {
+  margin-right: 20px;
+}
+
+.title {
+  flex-grow: 1;
+}
+
+.logo {
+  height: 50px;
+  flex-grow: 1;
+}
+
+.logoImg {
+
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}

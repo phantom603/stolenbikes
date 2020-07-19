@@ -1,0 +1,46 @@
+.root {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.thumbBox {
+  display: flex;
+
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 899px) {
+  .root {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .thumbBox {
+    flex-basis: auto;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 900px) {
+  .thumbBox {
+    flex-basis: 30%;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}
