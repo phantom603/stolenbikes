@@ -48,11 +48,12 @@ const Dashboard: React.FC = () => {
 
   const handleFilter = (values: FilterValuesType) => {
     const params: AdditionalRequestParamsType = {};
-    if (values.datetimeTo.length) {
-      params.occurred_before = new Date(values.datetimeTo).getTime() / 1000;
+
+    if (values.datetimeTo) {
+      params.occurred_before = values.datetimeTo.getTime() / 1000;
     }
-    if (values.datetimeFrom.length) {
-      params.occurred_after = new Date(values.datetimeFrom).getTime() / 1000;
+    if (values.datetimeFrom) {
+      params.occurred_after = values.datetimeFrom.getTime() / 1000;
     }
     if (values.search.length) {
       params.query = values.search;

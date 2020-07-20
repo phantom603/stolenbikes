@@ -29,10 +29,10 @@ export type IncidentsPageType = {
 }
 
 export type NewIncidentType = {
-  title: string;
-  description: string;
-  theftDate: string;
-  reportedDate: string;
-  location: string;
+  title: string | null;
+  description: string | null;
+  theftDate: Date | null;
+  reportedDate: Date | null;
+  location: string | null;
   files: Array<Object>
 }
