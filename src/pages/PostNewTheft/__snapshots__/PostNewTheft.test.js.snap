@@ -115,10 +115,77 @@ exports[`PostNewTheft component: should match stored snapshot 1`] = `
           >
             <div
               className="MuiFormControl-root MuiTextField-root textField"
+              field={
+                Object {
+                  "name": "theftDate",
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "value": null,
+                }
+              }
+              form={
+                Object {
+                  "dirty": false,
+                  "errors": Object {},
+                  "getFieldHelpers": [Function],
+                  "getFieldMeta": [Function],
+                  "getFieldProps": [Function],
+                  "handleBlur": [Function],
+                  "handleChange": [Function],
+                  "handleReset": [Function],
+                  "handleSubmit": [Function],
+                  "initialErrors": Object {},
+                  "initialStatus": undefined,
+                  "initialTouched": Object {},
+                  "initialValues": Object {
+                    "description": "",
+                    "files": Array [],
+                    "location": "",
+                    "reportedDate": null,
+                    "theftDate": null,
+                    "title": "",
+                  },
+                  "isSubmitting": false,
+                  "isValid": true,
+                  "isValidating": false,
+                  "registerField": [Function],
+                  "resetForm": [Function],
+                  "setErrors": [Function],
+                  "setFieldError": [Function],
+                  "setFieldTouched": [Function],
+                  "setFieldValue": [Function],
+                  "setFormikState": [Function],
+                  "setStatus": [Function],
+                  "setSubmitting": [Function],
+                  "setTouched": [Function],
+                  "setValues": [Function],
+                  "status": undefined,
+                  "submitCount": 0,
+                  "submitForm": [Function],
+                  "touched": Object {},
+                  "unregisterField": [Function],
+                  "validateField": [Function],
+                  "validateForm": [Function],
+                  "validateOnBlur": true,
+                  "validateOnChange": true,
+                  "validateOnMount": false,
+                  "values": Object {
+                    "description": "",
+                    "files": Array [],
+                    "location": "",
+                    "reportedDate": null,
+                    "theftDate": null,
+                    "title": "",
+                  },
+                }
+              }
+              format="MMMM do hh:mm aaaa"
+              onClick={[Function]}
+              onKeyDown={[Function]}
             >
               <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined"
-                data-shrink={true}
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
               >
                 Date of the theft
               </label>
@@ -131,13 +198,13 @@ exports[`PostNewTheft component: should match stored snapshot 1`] = `
                   autoFocus={false}
                   className="MuiInputBase-input MuiOutlinedInput-input"
                   disabled={false}
-                  name="theftDate"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
+                  readOnly={true}
                   required={false}
-                  type="datetime-local"
+                  type="text"
                   value=""
                 />
                 <fieldset
@@ -145,7 +212,7 @@ exports[`PostNewTheft component: should match stored snapshot 1`] = `
                   className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
                 >
                   <legend
-                    className="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                    className="PrivateNotchedOutline-legendLabelled-3"
                   >
                     <span>
                       Date of the theft
@@ -153,6 +220,7 @@ exports[`PostNewTheft component: should match stored snapshot 1`] = `
                   </legend>
                 </fieldset>
               </div>
+              
             </div>
           </div>
           <div
@@ -160,10 +228,77 @@ exports[`PostNewTheft component: should match stored snapshot 1`] = `
           >
             <div
               className="MuiFormControl-root MuiTextField-root textField"
+              field={
+                Object {
+                  "name": "reportedDate",
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "value": null,
+                }
+              }
+              form={
+                Object {
+                  "dirty": false,
+                  "errors": Object {},
+                  "getFieldHelpers": [Function],
+                  "getFieldMeta": [Function],
+                  "getFieldProps": [Function],
+                  "handleBlur": [Function],
+                  "handleChange": [Function],
+                  "handleReset": [Function],
+                  "handleSubmit": [Function],
+                  "initialErrors": Object {},
+                  "initialStatus": undefined,
+                  "initialTouched": Object {},
+                  "initialValues": Object {
+                    "description": "",
+                    "files": Array [],
+                    "location": "",
+                    "reportedDate": null,
+                    "theftDate": null,
+                    "title": "",
+                  },
+                  "isSubmitting": false,
+                  "isValid": true,
+                  "isValidating": false,
+                  "registerField": [Function],
+                  "resetForm": [Function],
+                  "setErrors": [Function],
+                  "setFieldError": [Function],
+                  "setFieldTouched": [Function],
+                  "setFieldValue": [Function],
+                  "setFormikState": [Function],
+                  "setStatus": [Function],
+                  "setSubmitting": [Function],
+                  "setTouched": [Function],
+                  "setValues": [Function],
+                  "status": undefined,
+                  "submitCount": 0,
+                  "submitForm": [Function],
+                  "touched": Object {},
+                  "unregisterField": [Function],
+                  "validateField": [Function],
+                  "validateForm": [Function],
+                  "validateOnBlur": true,
+                  "validateOnChange": true,
+                  "validateOnMount": false,
+                  "values": Object {
+                    "description": "",
+                    "files": Array [],
+                    "location": "",
+                    "reportedDate": null,
+                    "theftDate": null,
+                    "title": "",
+                  },
+                }
+              }
+              format="MMMM do hh:mm aaaa"
+              onClick={[Function]}
+              onKeyDown={[Function]}
             >
               <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined"
-                data-shrink={true}
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
               >
                 Reported date
               </label>
@@ -176,13 +311,13 @@ exports[`PostNewTheft component: should match stored snapshot 1`] = `
                   autoFocus={false}
                   className="MuiInputBase-input MuiOutlinedInput-input"
                   disabled={false}
-                  name="reportedDate"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
+                  readOnly={true}
                   required={false}
-                  type="datetime-local"
+                  type="text"
                   value=""
                 />
                 <fieldset
@@ -190,7 +325,7 @@ exports[`PostNewTheft component: should match stored snapshot 1`] = `
                   className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
                 >
                   <legend
-                    className="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                    className="PrivateNotchedOutline-legendLabelled-3"
                   >
                     <span>
                       Reported date
@@ -198,6 +333,7 @@ exports[`PostNewTheft component: should match stored snapshot 1`] = `
                   </legend>
                 </fieldset>
               </div>
+              
             </div>
           </div>
           <div

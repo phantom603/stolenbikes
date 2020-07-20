@@ -7,6 +7,7 @@ import { Button, Grid } from '@material-ui/core';
 import classes from './PostNewTheft.module.scss';
 
 import UploadZone from '../../components/UploadZone';
+import FormikDateTimePicker from '../../components/FormikDateTimePicker';
 import { postIncident } from '../../core/http/incident/incident.service';
 
 import { NewIncidentType } from '../../core/interfaces/Incidents.type';
@@ -21,8 +22,8 @@ const PostNewTheft: React.FC = () => {
   const initialValues: NewIncidentType = {
     title: '',
     description: '',
-    theftDate: '',
-    reportedDate: '',
+    theftDate: null,
+    reportedDate: null,
     location: '',
     files: []
   }
@@ -36,9 +37,9 @@ const PostNewTheft: React.FC = () => {
       .min(10, errorMessage.stringTooShort)
       .max(250, errorMessage.stringTooLong)
       .required(errorMessage.required),
-    theftDate: Yup.string()
+    theftDate: Yup.date().nullable()
       .required(errorMessage.required),
-    reportedDate: Yup.string()
+    reportedDate: Yup.date().nullable()
       .required(errorMessage.required),
     location: Yup.string()
       .max(100, errorMessage.stringTooLong)
@@ -57,11 +58,10 @@ const PostNewTheft: React.FC = () => {
           postIncident(values)
         }}
       >
-        {({handleSubmit, setFieldValue, isSubmitting}) => (
+        {({handleSubmit, setFieldValue, isSubmitting, values, errors, touched}) => (
           <form onSubmit={handleSubmit}>
             <Grid container>
               <Grid item xs={12} md={6}>
-
                 <Grid container spacing={2}>
                   <Grid item xs={12}>
                     <Field
@@ -92,28 +92,32 @@ const PostNewTheft: React.FC = () => {
                   </Grid>
                   <Grid item xs={12}>
                     <Field
-                      component={TextField}
+                      component={FormikDateTimePicker}
                       name="theftDate"
                       label="Date of the theft"
-                      type="datetime-local"
                       variant="outlined"
                       className={classes.textField}
-                      InputLabelProps={{
-                        shrink: true,
+                      onChange={value => {
+                        setFieldValue('theftDate', value)
                       }}
+                      value={values.theftDate}
+                      error={!!errors.theftDate && touched.theftDate}
+                      helperText={touched.theftDate ? errors.theftDate : ''}
                     />
                   </Grid>
                   <Grid item xs={12}>
                     <Field
-                      component={TextField}
+                      component={FormikDateTimePicker}
                       name="reportedDate"
                       label="Reported date"
-                      type="datetime-local"
                       variant="outlined"
                       className={classes.textField}
-                      InputLabelProps={{
-                        shrink: true,
+                      onChange={value => {
+                        setFieldValue('reportedDate', value)
                       }}
+                      value={values.reportedDate}
+                      error={!!errors.reportedDate && touched.reportedDate}
+                      helperText={touched.reportedDate ? errors.reportedDate : ''}
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -151,7 +155,6 @@ const PostNewTheft: React.FC = () => {
                     </Button>
                   </Grid>
                 </Grid>
-
               </Grid>
             </Grid>
           </form>

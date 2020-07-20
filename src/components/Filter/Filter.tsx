@@ -5,6 +5,7 @@ import classes from './Filter.module.scss';
 import { Formik, Form, Field } from 'formik'
 import { TextField } from 'formik-material-ui';
 import { FilterValuesType } from '../../core/interfaces/Filter.type';
+import FormikDateTimePicker from '../FormikDateTimePicker';
 
 type PropsType = {
   onSubmitCb: (params: FilterValuesType) => void;
@@ -13,8 +14,8 @@ type PropsType = {
 const Filter: React.FC<PropsType> = (_props) => {
   const initialValues: FilterValuesType = {
     search: '',
-    datetimeFrom: '',
-    datetimeTo: ''
+    datetimeFrom: null,
+    datetimeTo: null
   }
 
   return (
@@ -26,7 +27,7 @@ const Filter: React.FC<PropsType> = (_props) => {
           _props.onSubmitCb(values as FilterValuesType);
         }}
       >
-        {({submitForm, isSubmitting}) => (
+        {({submitForm, isSubmitting, setFieldValue, values}) => (
           <Form>
             <Grid container spacing={2}>
               <Grid item xs={12} md={4}>
@@ -40,28 +41,28 @@ const Filter: React.FC<PropsType> = (_props) => {
               </Grid>
               <Grid item xs={12} sm={6} md={3}>
                 <Field
-                  component={TextField}
+                  component={FormikDateTimePicker}
                   name="datetimeFrom"
                   label="From"
-                  type="datetime-local"
                   variant="outlined"
                   className={classes.textField}
-                  InputLabelProps={{
-                    shrink: true,
+                  onChange={value => {
+                    setFieldValue('datetimeFrom', value)
                   }}
+                  value={values.datetimeFrom}
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={3}>
                 <Field
-                  component={TextField}
+                  component={FormikDateTimePicker}
                   name="datetimeTo"
                   label="To"
-                  type="datetime-local"
                   variant="outlined"
                   className={classes.textField}
-                  InputLabelProps={{
-                    shrink: true,
+                  onChange={value => {
+                    setFieldValue('datetimeTo', value)
                   }}
+                  value={values.datetimeTo}
                 />
               </Grid>
 

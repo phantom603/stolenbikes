@@ -1,5 +1,5 @@
 export type FilterValuesType = {
   search: string;
-  datetimeFrom: string;
-  datetimeTo: string;
+  datetimeFrom: Date | null;
+  datetimeTo: Date | null;
 }
